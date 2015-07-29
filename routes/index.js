@@ -55,7 +55,7 @@ router.get('/api/v1/todos/', function(req, res) {
     // Get a client from the connection pool
     pg.connect(connectionString, function(err, client, done) {
 
-        // SQL Query > Select Data
+        // Select Data
         var query = client.query("SELECT * FROM items ORDER BY id ASC;");
 
         // Stream results back one row at a time
